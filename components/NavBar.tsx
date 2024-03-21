@@ -9,7 +9,7 @@ const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className='max-w-7xl mx-auto px-9 pt-8 md:pt-15 md:px-10'>
+    <header className='max-w-7xl mx-auto px-9 pt-2 md:pt-15 md:px-10'>
       <nav className='w-full text-white'>
         <div className='container mx-auto flex items-center justify-between py-5'>
           <div className='w-40 h-12 lg:w-72 lg:h-20 relative'>
