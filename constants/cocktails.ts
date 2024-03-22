@@ -101,12 +101,24 @@ export const COCKTAILS = [
   },
   {
     name: 'Bosque de Indias Caña Brava',
-    description: 'Ginebra Bosque de Indias, Sprite, Zumo y trozos de naranja, Blue y Cereza',
+    description:
+      'Ginebra Bosque de Indias, Sprite, Zumo y trozos de naranja, Blue y Cereza',
     value: '30K',
   },
   {
     name: 'Arrebatao',
-    description: 'Ginebra Bosque de Indias, Frutos rojos con arándanos, Cerezas, Mora, Fresas, Granadina y Sprite',
+    description:
+      'Ginebra Bosque de Indias, Frutos rojos con arándanos, Cerezas, Mora, Fresas, Granadina y Sprite',
+    value: '30K',
+  },
+  {
+    name: 'Mojito Blue',
+    description: 'Ron blanco, Ron oscuro, Zumo de limón, Blue y Sprite',
+    value: '30K',
+  },
+  {
+    name: 'Besame Mucho',
+    description: 'Whisky, Jugo de mandarina, Zumo de limón y Hierbabuena',
     value: '30K',
   },
 ];

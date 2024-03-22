@@ -22,7 +22,6 @@ const OtherLiquorSection = () => {
         transition: 'opacity 0.1s ease',
       }}
     >
-      <div className='absolute bottom-20 w-[200%] h-[1000px] -z-10 gradient-radial-1'></div>
       <h2 className='text-orange-600 text-5xl font-extrabold mb-8 text-center'>
         Otros Licores
       </h2>

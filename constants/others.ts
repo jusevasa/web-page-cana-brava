@@ -47,8 +47,8 @@ export const OTHERS = [
     value: '$7.000',
   },
   {
-    name: 'Te Hatsu',
-    value: '$18.000',
+    name: 'Electrolic',
+    value: '$15.000',
   },
   {
     name: 'Soda',

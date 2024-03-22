@@ -43,7 +43,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ categories }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-20 overflow-x-scroll flex items-center shadow-md [&::-webkit-scrollbar]:hidden scroll-smooth transition-colors ${
+      className={`fixed top-0 py-3 w-full z-20 overflow-x-scroll flex items-center shadow-md [&::-webkit-scrollbar]:hidden scroll-smooth transition-colors ${
         currentSection === 8 ? 'bg-black' : 'bg-white'
       }`}
     >

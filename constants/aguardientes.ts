@@ -23,9 +23,5 @@ export const AGUARDIENTES = [
     name: 'Aguardiente Amarillo',
     bottle: '$ 150.000',
     halfBottle: '$ 85.000',
-  },
-  {
-    name: 'Aguardiente Amarillo (Litro)',
-    bottle: '$ 190.000',
-  },
+  }
 ];
