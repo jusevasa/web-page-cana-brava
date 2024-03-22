@@ -1,20 +1,59 @@
 'use client';
 
+import React, { useState, useEffect } from 'react';
+
 import { Categorie } from '@/types';
-import React from 'react';
 
 interface MobileMenuProps {
   categories: Categorie[];
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ categories }) => {
+  const [currentSection, setCurrentSection] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      const sectionPositions: Record<string, number> = {};
+      categories.forEach((category) => {
+        const section = document.getElementById(`${category.id}`);
+        if (section) {
+          sectionPositions[category.id] = section.offsetTop;
+        }
+      });
+
+      let activeSection: number | null = null;
+      for (const [id, position] of Object.entries(sectionPositions)) {
+        if (scrollPosition >= position) {
+          activeSection = parseInt(id);
+        } else {
+          break;
+        }
+      }
+
+      setCurrentSection(activeSection);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [categories]);
+
   return (
-    <nav className='fixed top-0 w-full bg-white z-20 overflow-x-scroll flex items-center py-4 border-b border-gray-200 shadow-sm [&::-webkit-scrollbar]:hidden scroll-smooth'>
+    <nav
+      className={`fixed top-0 w-full z-20 overflow-x-scroll flex items-center shadow-md [&::-webkit-scrollbar]:hidden scroll-smooth transition-colors ${
+        currentSection === 8 ? 'bg-black' : 'bg-white'
+      }`}
+    >
       {categories.map((category, index) => (
         <React.Fragment key={index}>
           <div
-            className='px-4 text-md text-gray-800 font-semibold cursor-pointer text-center capitalize'
-            onClick={() => scrollToSection(`${category.id}`)}
+            className={`px-4 text-md font-semibold cursor-pointer text-center capitalize transition-colors ${
+              currentSection === 8 ? 'text-white' : 'text-black'
+            }`}
+            onClick={() => scrollToSection(`${category.id}`, index)}
           >
             {category.name}
           </div>
@@ -27,9 +66,18 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ categories }) => {
   );
 };
 
-const scrollToSection = (sectionId: string) => {
+const scrollToSection = (sectionId: string, index: number) => {
   const section = document.getElementById(sectionId);
   if (section) {
+    if (index === 0) {
+      section.style.scrollMarginTop = '200px';
+    } else if (index === 3) {
+      section.style.scrollMarginTop = '200px';
+    } else if (index === 4) {
+      section.style.scrollMarginTop = '350px';
+    } else {
+      section.style.scrollMarginTop = '100px';
+    }
     section.scrollIntoView({ behavior: 'smooth' });
   }
 };

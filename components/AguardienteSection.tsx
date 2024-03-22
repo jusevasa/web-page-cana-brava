@@ -1,15 +1,30 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 import { AGUARDIENTES } from '@/constants';
 
 const AguardienteSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
     <section
-      className='bg-orange-600 rounded-lg p-8 pb-24 mb-8 mx-5 relative'
+      className={`bg-orange-600 rounded-lg p-8 pb-20 mb-8 mx-5 relative ${
+        inView
+          ? 'animate-fade-right animate-ease-in-out opacity-100'
+          : 'opacity-0'
+      }`}
       id='4'
+      ref={ref}
+      style={{
+        transition: 'opacity 0.1s ease',
+      }}
     >
-      <h2 className='text-white text-5xl font-extrabold mb-8 text-end'>
+      <h2 className='text-white text-4xl mb-5 font-extrabold text-center'>
         Aguardiente
       </h2>
       <div className='grid grid-cols-3 gap-x-2 gap-y-4 justify-center items-center'>
@@ -33,7 +48,7 @@ const AguardienteSection = () => {
           );
         })}
       </div>
-      <div className='absolute w-auto h-auto z-10 bottom-[-75px] left-8'>
+      <div className='absolute w-auto h-auto z-10 bottom-[-85px] left-16'>
         <Image
           alt='botella media antioqueno azul'
           src='/antioqueno-azul.webp'
@@ -43,7 +58,7 @@ const AguardienteSection = () => {
           loading='lazy'
         />
       </div>
-      <div className='absolute w-auto h-auto z-[-0] left-20'>
+      <div className='absolute w-auto h-auto z-[-0] left-24'>
         <Image
           alt='botella media antioqueno verde'
           src='/antioqueno-verde.webp'

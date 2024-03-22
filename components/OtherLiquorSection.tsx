@@ -1,13 +1,28 @@
+'use client';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import { OTHERS_LIQUORS } from '@/constants';
 
 const OtherLiquorSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
     <section
-      className='bg-transparent rounded-lg p-8 pb-24 mb-8 mx-5 relative'
+      className={`bg-transparent rounded-lg p-8 pb-24 mb-8 mx-5 relative ${
+        inView
+          ? 'animate-fade-left animate-ease-in-out opacity-100'
+          : 'opacity-0'
+      }`}
       id='7'
+      ref={ref}
+      style={{
+        transition: 'opacity 0.1s ease',
+      }}
     >
+      <div className='absolute bottom-20 w-[200%] h-[1000px] -z-10 gradient-radial-1'></div>
       <h2 className='text-orange-600 text-5xl font-extrabold mb-8 text-center'>
         Otros Licores
       </h2>

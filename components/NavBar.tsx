@@ -1,9 +1,9 @@
 'use client';
 import Hamburger from 'hamburger-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { useState } from 'react';
+import { CanaBravaWhiteLogo } from './logos';
 
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -12,10 +12,9 @@ const NavBar = () => {
     <header className='max-w-7xl mx-auto px-9 pt-2 md:pt-15 md:px-10'>
       <nav className='w-full text-white'>
         <div className='container mx-auto flex items-center justify-between py-5'>
-          <div className='w-40 h-12 lg:w-72 lg:h-20 relative'>
-            <Image alt='logo caña brava' src='/logo-cana-white.webp' fill />
+          <div className='w-full h-auto'>
+              <CanaBravaWhiteLogo width={180} height={50}/>
           </div>
-
           <div className='flex items-center justify-end'>
             <div className='md:hidden z-20'>
               <Hamburger toggled={isOpen} toggle={setOpen} />

@@ -1,11 +1,28 @@
+'use client';
+
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import { BEERS, OTHERS } from '@/constants';
 
 const BeerSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
     <section className='bg-white p-8 relative' id='8'>
-      <div>
+      <div
+        className={`'  ${
+          inView
+            ? 'animate-fade-left animate-ease-in-out opacity-100'
+            : 'opacity-0'
+        }`}
+        ref={ref}
+        style={{
+          transition: 'opacity 0.1s ease',
+        }}
+      >
         <h2 className='text-orange-600 text-6xl font-bold mb-8 text-end'>
           Cervezas
         </h2>
@@ -25,7 +42,13 @@ const BeerSection = () => {
           )}
         </div>
       </div>
-      <div className='mt-10'>
+      <div
+        className={`mt-10 ${
+          inView
+            ? 'animate-fade-left animate-ease-in-out opacity-100'
+            : 'opacity-0'
+        }`}
+      >
         <h2 className='text-orange-600 text-6xl font-bold mb-8 text-center'>
           Otros
         </h2>

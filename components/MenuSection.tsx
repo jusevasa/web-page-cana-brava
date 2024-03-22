@@ -1,7 +1,7 @@
 import Marquee from 'react-fast-marquee';
 import Link from 'next/link';
 
-export const SectionMenu = () => {
+export const MenuSection = () => {
   return (
     <section className='flex justify-between items-center flex-col gap-3 md:gap-4 w-full my-4 md:mt-10 '>
       <div className='w-full hidden md:block min-h-[120px]'>

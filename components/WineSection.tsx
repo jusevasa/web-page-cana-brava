@@ -1,12 +1,27 @@
+'use client';
+
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import { WINES } from '@/constants';
 
 const WineSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
     <section
-      className='bg-transparent rounded-lg p-8 pb-10 mx-5'
+      className={`bg-transparent rounded-lg p-8 pb-10 mx-5 ${
+        inView
+          ? 'animate-fade-right animate-ease-in-out opacity-100'
+          : 'opacity-0'
+      }`}
       id='6'
+      ref={ref}
+      style={{
+        transition: 'opacity 0.1s ease',
+      }}
     >
       <div className='absolute top-1/2 left-10 h-[1000px] -z-10 gradient-radial-1 w-[200%]'></div>
       <h2 className='text-orange-600 text-5xl font-extrabold mb-8 text-start'>
