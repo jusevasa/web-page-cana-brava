@@ -20,7 +20,7 @@ export const TEQUILAS = [
   {
     name: 'Olmeca',
     bottle: '$ 180.000',
-    halfBottle: '$ 170.000',
+    halfBottle: '$ 110.000',
   },
   {
     name: 'Milagro',

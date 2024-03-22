@@ -1,18 +1,18 @@
 export const COCKTAILS = [
   {
     name: 'Caña Brava Especial',
-    description: 'Vodka, Bacardi, Licor de durazno, Granadilla y Hielo',
+    description: 'Vodka, Bacardi, Licor de durazno, Granadina y Hielo',
     value: '30K',
   },
   {
     name: 'Mojito Maracuyá',
     description:
-      'Ron dorado, Ron blanco, Azúcar, Hierbabuena, Ginger, Pulpa de maracuyá y hielo',
+      'Ron dorado, Ron blanco, Azúcar, Hierbabuena, Ginger, Pulpa de maracuyá y Hielo',
     value: '30K',
   },
   {
     name: 'Caña Brava',
-    description: 'Tres tragos blancos, jugo de naranja, granadina y hielo',
+    description: 'Tres tragos blancos, Jugo de naranja, Granadina y Hielo',
     value: '30K',
   },
   {
@@ -97,6 +97,16 @@ export const COCKTAILS = [
   {
     name: 'Reggae',
     description: 'Jugo de naranja, Granadina, Ron, Menta y Hielo',
+    value: '30K',
+  },
+  {
+    name: 'Bosque de Indias Caña Brava',
+    description: 'Ginebra Bosque de Indias, Sprite, Zumo y trozos de naranja, Blue y Cereza',
+    value: '30K',
+  },
+  {
+    name: 'Arrebatao',
+    description: 'Ginebra Bosque de Indias, Frutos rojos con arándanos, Cerezas, Mora, Fresas, Granadina y Sprite',
     value: '30K',
   },
 ];

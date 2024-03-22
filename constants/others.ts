@@ -1,6 +1,6 @@
 export const OTHERS_LIQUORS = [
   {
-    name: 'Jagermeister',
+    name: 'Jägermeister',
     bottle: '$ 190.000',
   },
   {
@@ -20,42 +20,46 @@ export const OTHERS_LIQUORS = [
 export const OTHERS = [
   {
     name: 'Capuchino con Licor',
-    value: '$10,000',
+    value: '$10.000',
+  },
+  {
+    name: 'Monster',
+    value: '$15.000',
   },
   {
     name: 'Red Bull',
-    value: '$15,000',
+    value: '$15.000',
   },
   {
     name: 'Capuchino sin Licor',
-    value: '$9,000',
+    value: '$9.000',
   },
   {
     name: 'Gatorade',
-    value: '$15,000',
+    value: '$10.000',
   },
   {
-    name: 'Fruze Tea',
-    value: '$9,000',
+    name: 'Fuze Tea',
+    value: '$9.000',
   },
   {
     name: 'Gaseosa',
-    value: '$7,000',
+    value: '$7.000',
   },
   {
     name: 'Te Hatsu',
-    value: '$18,000',
+    value: '$18.000',
   },
   {
     name: 'Soda',
-    value: '$7,000',
+    value: '$7.000',
   },
   {
     name: 'Vino Caliente',
-    value: '$15,000',
+    value: '$15.000',
   },
   {
     name: 'Agua',
-    value: '$6,000',
+    value: '$6.000',
   },
 ];
