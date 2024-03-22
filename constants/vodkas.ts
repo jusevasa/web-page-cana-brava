@@ -1,18 +1,18 @@
 export const VODKAS = [
   {
     name: 'Absolut',
-    bottle: '$ 165.000',
-    halfBottle: '$ 115.000',
+    bottle: '$ 175.000',
+    halfBottle: '$ 125.000',
   },
   {
     name: 'Smirnoff',
-    bottle: '$ 165.000',
-    halfBottle: '$ 100.000',
+    bottle: '$ 175.000',
+    halfBottle: '$ 110.000',
   },
   {
     name: 'Smirnoff Lulo',
-    bottle: '$ 155.000',
-    halfBottle: '$ 73.000',
+    bottle: '$ 165.000',
+    halfBottle: '$ 83.000',
   },
   {
     name: 'Smirnoff Ice',

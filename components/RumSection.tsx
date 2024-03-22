@@ -1,10 +1,27 @@
+'use client';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import { RUMS } from '@/constants';
 
 const RumSection = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
   return (
-    <section className='bg-transparent rounded-lg p-4 mb-8 mx-5' id='2'>
+    <section
+      className={`bg-transparent rounded-lg p-4 mb-8 mx-5 ${
+        inView
+          ? 'animate-fade-right animate-ease-in-out opacity-100'
+          : 'opacity-0'
+      }`}
+      id='2'
+      ref={ref}
+      style={{
+        transition: 'opacity 0.1s ease',
+      }}
+    >
       <h2 className='text-orange-600 text-5xl font-extrabold mb-8 text-center'>
         Ron
       </h2>
