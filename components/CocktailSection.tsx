@@ -8,7 +8,7 @@ import { COCKTAILS } from '@/constants';
 const CocktailSection = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.2,
   });
   return (
     <section className='bg-orange-600 p-8 relative w-full' id='9'>
@@ -32,15 +32,15 @@ const CocktailSection = () => {
               const { name, description, value } = drink;
               return (
                 <div
-                  className='row text-white justify-center items-center'
+                  className='grid grid-cols-4 text-white justify-start items-start'
                   key={index}
                 >
-                  <div className='flex justify-between items-center font-bold'>
-                    <h3>{name}</h3>
-                    <span className='text-2xl'>{value}</span>
-                  </div>
-                  <div className='flex'>
+                  <div className='flex flex-col col-span-3 w-full'>
+                    <h3 className='font-semibold'>{name}</h3>
                     <p className='font-light'>{description}</p>
+                  </div>
+                  <div className='flex justify-end'>
+                    <span className='text-2xl'>{value}</span>
                   </div>
                 </div>
               );

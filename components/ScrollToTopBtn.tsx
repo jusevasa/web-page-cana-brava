@@ -46,7 +46,7 @@ export const ScrollToTopBtn: React.FC = () => {
   return (
     <div
       id='button-up'
-      className='fixed bottom-2 right-2 opacity-0 transition-opacity'
+      className='fixed bottom-6 right-2 opacity-0 transition-opacity'
     >
       <button
         id='scroll-to-top'
@@ -60,7 +60,7 @@ export const ScrollToTopBtn: React.FC = () => {
           stroke='#F48604'
           viewBox='0 0 24 24'
           fill='none'
-          className='h-6 w-6 -rotate-45 group-hover:-rotate-90 group-hover:text-accent motion-safe:transition'
+          className='h-8 w-8 -rotate-45 group-hover:-rotate-90 group-hover:text-accent motion-safe:transition'
           width='20px'
         >
           <path
