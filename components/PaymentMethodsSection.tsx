@@ -7,7 +7,7 @@ const PaymentMethodsSection = () => {
       <div className='grid grid-cols-2 gap-4 justify-center items-center'>
         <Image
           alt='metodo de pago mastercard'
-          src='/Mastercard-logo.webp'
+          src='/ic-mastercard.webp'
           width={90}
           height={90}
           style={{ objectFit: 'cover' }}
