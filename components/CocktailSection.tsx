@@ -24,7 +24,7 @@ const CocktailSection = () => {
         }}
       >
         <h2 className='text-white text-6xl font-bold mb-8 text-center drop-shadow-xl'>
-          Cocktails
+          Cócteles
         </h2>
         <div className='grid grid-cols-1 gap-y-8 justify-center items-center'>
           {COCKTAILS.sort((a, b) => a.name.localeCompare(b.name)).map(
