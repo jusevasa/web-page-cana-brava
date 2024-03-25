@@ -24,7 +24,7 @@ body {
 
 .text-outline {
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: #ffe32ecf;
 }
 
@@ -42,4 +42,8 @@ body {
     rgba(255, 214, 0, 0.7) 0%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+
+.img-mask {
+  mask-image: linear-gradient(black 90%, transparent);
 }
