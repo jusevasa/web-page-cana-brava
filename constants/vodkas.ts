@@ -1,8 +1,8 @@
 export const VODKAS = [
   {
     name: 'Absolut',
-    bottle: '$ 175.000',
-    halfBottle: '$ 125.000',
+    bottle: '$ 220.000',
+    halfBottle: '$ 135.000',
   },
   {
     name: 'Smirnoff',

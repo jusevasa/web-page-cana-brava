@@ -12,7 +12,7 @@ const WineSection = () => {
   });
   return (
     <section
-      className={`bg-transparent rounded-lg p-8 pb-10 mx-5 ${
+      className={`bg-transparent rounded-lg p-8 pb-10 mx-5 w-full max-w-2xl ${
         inView
           ? 'animate-fade-right animate-ease-in-out opacity-100'
           : 'opacity-0'

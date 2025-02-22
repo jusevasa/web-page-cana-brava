@@ -11,7 +11,7 @@ const TequilaSection = () => {
   });
   return (
     <section
-      className={`bg-transparent rounded-lg p-4 mb-8 mx-5 relative ${
+      className={`bg-transparent rounded-lg p-4 mb-8 mx-5 relative w-full max-w-2xl ${
         inView
           ? 'animate-fade-left animate-ease-in-out opacity-100'
           : 'opacity-0'

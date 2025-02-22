@@ -7,11 +7,11 @@ import { OTHERS_LIQUORS } from '@/constants';
 const OtherLiquorSection = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.8,
   });
   return (
     <section
-      className={`bg-transparent rounded-lg p-8 pb-24 mb-8 mx-5 relative ${
+      className={`bg-transparent rounded-lg p-8 pb-24 mb-8 mx-5 relative w-full max-w-2xl ${
         inView
           ? 'animate-fade-left animate-ease-in-out opacity-100'
           : 'opacity-0'

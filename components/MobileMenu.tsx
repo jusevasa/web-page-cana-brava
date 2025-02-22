@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 
-import { Categorie } from '@/types';
+import { Category } from '@/types';
 
 interface MobileMenuProps {
-  categories: Categorie[];
+  categories: Category[];
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ categories }) => {
@@ -44,22 +44,19 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ categories }) => {
   return (
     <nav
       className={`fixed top-0 py-3 w-full z-20 overflow-x-scroll flex items-center shadow-md [&::-webkit-scrollbar]:hidden scroll-smooth transition-colors ${
-        currentSection === 8 ? 'bg-black' : 'bg-white'
+        currentSection === 8 || currentSection === 9 ? 'bg-black' : 'bg-white'
       }`}
     >
       {categories.map((category, index) => (
         <React.Fragment key={index}>
           <div
             className={`px-4 text-md font-semibold cursor-pointer text-center capitalize transition-colors ${
-              currentSection === 8 ? 'text-white' : 'text-black'
+              currentSection === 8 || currentSection === 9 ? 'text-white' : 'text-black'
             }`}
             onClick={() => scrollToSection(`${category.id}`, index)}
           >
             {category.name}
           </div>
-          {index !== categories.length - 1 && (
-            <div className='mx-2 border-r border-gray-300 h-4' />
-          )}
         </React.Fragment>
       ))}
     </nav>

@@ -1,6 +1,6 @@
-import { Categorie } from '@/types';
+import { Category } from '@/types';
 
-export const CATEGORIES: Categorie[] = [
+export const CATEGORIES: Category[] = [
   {
     id: 1,
     name: 'whisky',
@@ -35,6 +35,10 @@ export const CATEGORIES: Categorie[] = [
   },
   {
     id: 9,
+    name: 'otros',
+  },
+  {
+    id: 10,
     name: 'cocteles',
   },
 ];

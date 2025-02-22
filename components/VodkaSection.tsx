@@ -12,7 +12,7 @@ const VodkaSection = () => {
   });
   return (
     <section
-      className={`bg-transparent rounded-lg p-8 pb-10 mx-5 relative mt-4 ${
+      className={`bg-transparent rounded-lg p-8 pb-10 mx-5 relative mt-4 w-full max-w-2xl ${
         inView
           ? 'animate-fade-left animate-ease-in-out opacity-100'
           : 'opacity-0'

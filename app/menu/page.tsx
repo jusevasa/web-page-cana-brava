@@ -15,6 +15,7 @@ import { CanaBravaWhiteLogo } from '@/components/logos';
 import CocktailSection from '@/components/CocktailSection';
 import { ScrollToTopBtn } from '@/components/ScrollToTopBtn';
 import PaymentMethodsSection from '@/components/PaymentMethodsSection';
+import OtherSection from '@/components/OtherSection';
 
 export const metadata = {
   title: 'Caña Brava Sala Bar | Menu',
@@ -39,6 +40,7 @@ export default async function Page() {
         <WineSection />
         <OtherLiquorSection />
         <BeerSection />
+        <OtherSection />
         <CocktailSection />
         <PaymentMethodsSection />
       </main>

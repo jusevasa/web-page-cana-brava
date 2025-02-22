@@ -1,45 +1,47 @@
 export const TEQUILAS = [
   {
     name: 'Tequila 1800 Añejo',
-    bottle: '$ 290.000',
+    bottle: '$ 350.000',
   },
   {
     name: 'Tequila 1800 Reposado',
-    bottle: '$ 310.000',
+    bottle: '$ 380.000',
   },
   {
     name: 'Jose Cuervo',
-    bottle: '$ 180.000',
-    halfBottle: '$ 110.000',
+    bottle: '$ 230.000',
+    halfBottle: '$ 120.000',
   },
   {
     name: 'Jimador',
-    bottle: '$ 190.000',
-    halfBottle: '$ 110.000',
+    bottle: '$ 250.000',
   },
   {
     name: 'Olmeca',
     bottle: '$ 180.000',
-    halfBottle: '$ 110.000',
   },
   {
     name: 'Milagro',
-    bottle: '$ 380.000',
+    bottle: '$ 420.000',
   },
   {
     name: 'Herradura',
-    bottle: '$ 310.000',
+    bottle: '$ 520.000',
   },
   {
     name: 'Patrón',
-    bottle: '$ 310.000',
+    bottle: '$ 520.000',
   },
   {
     name: 'Don Julio',
-    bottle: '$ 280.000',
+    bottle: '$ 480.000',
   },
   {
     name: 'Don Julio Blanco',
-    bottle: '$ 330.000',
+    bottle: '$ 600.000',
+  },
+  {
+    name: 'Tequila Centenario',
+    bottle: '$ 180.000',
   },
 ];

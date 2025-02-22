@@ -11,6 +11,7 @@ const AguardienteSection = () => {
     triggerOnce: true,
     threshold: 0.3,
   });
+
   return (
     <section
       className={`bg-orange-600 rounded-lg p-8 pb-20 mb-8 mx-5 relative ${
@@ -48,25 +49,29 @@ const AguardienteSection = () => {
           );
         })}
       </div>
-      <div className='absolute w-auto h-auto z-10 bottom-[-85px] left-16'>
-        <Image
-          alt='botella media antioqueno azul'
-          src='/antioqueno-azul.webp'
-          width={100}
-          height={100}
-          style={{ objectFit: 'cover' }}
-          loading='lazy'
-        />
-      </div>
-      <div className='absolute w-auto h-auto z-[-0] left-24'>
-        <Image
-          alt='botella media antioqueno verde'
-          src='/antioqueno-verde.webp'
-          width={90}
-          height={90}
-          style={{ objectFit: 'cover' }}
-          loading='lazy'
-        />
+
+      {/* Contenedor de imágenes */}
+      <div className='absolute w-full h-auto flex justify-start items-end bottom-[-85px] left-0 px-4'>
+        {/* Botella azul */}
+        <div className='relative w-[100px] h-[180px] z-10'>
+          <Image
+            alt='botella media antioqueno azul'
+            src='/antioqueno-azul.webp'
+            fill
+            style={{ objectFit: 'contain' }}
+            loading='lazy'
+          />
+        </div>
+        {/* Botella verde (superpuesta) */}
+        <div className='relative w-[90px] h-[180px] -ml-12 z-0'>
+          <Image
+            alt='botella media antioqueno verde'
+            src='/antioqueno-verde.webp'
+            fill
+            style={{ objectFit: 'contain' }}
+            loading='lazy'
+          />
+        </div>
       </div>
     </section>
   );
