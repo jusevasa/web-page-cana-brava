@@ -7,7 +7,7 @@ import { TEQUILAS } from '@/constants';
 const TequilaSection = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.2,
   });
   return (
     <section

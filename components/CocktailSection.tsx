@@ -8,7 +8,7 @@ import { COCKTAILS, COCKTAILS_PREMIUM } from '@/constants';
 const CocktailSection = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.1,
   });
   return (
     <section className='bg-orange-600 p-8 relative w-full max-w-2xl' id='10'>

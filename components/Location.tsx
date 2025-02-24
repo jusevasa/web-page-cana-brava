@@ -15,7 +15,7 @@ const center = {
 
 export const Location = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyDGVKwYyakjeU8FQour1ZEwN8eEMWIj88k',
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || '',
   });
 
   if (loadError) return <div>Error al cargar el mapa</div>;
@@ -29,8 +29,8 @@ export const Location = () => {
       <div className='rounded-lg overflow-hidden shadow-lg'>
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
-          zoom={15} // Nivel de zoom del mapa
-          center={center} // Centra el mapa en las coordenadas de tu local
+          zoom={17}
+          center={center}
         >
           <Marker position={center} />
         </GoogleMap>
