@@ -1,7 +1,7 @@
 export const WHISKYS = [
   {
     name: "Buchanan's 18 Años",
-    bottle: '$ 480.000',
+    bottle: '$ 550.000',
   },
   {
     name: "Buchanan's 12 Años",
@@ -21,7 +21,7 @@ export const WHISKYS = [
     halfBottle: '$ 160.000',
   },
   {
-    name: 'Old Park',
+    name: 'Old Parr',
     bottle: '$ 320.000',
     halfBottle: '$ 180.000',
   },
