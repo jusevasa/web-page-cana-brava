@@ -1,4 +1,5 @@
 'use client';
+import { URL_WHATSAPP_API_RESERVATION } from '@/constants/general';
 import Image from 'next/image';
 import Typed from 'react-typed';
 
@@ -34,7 +35,7 @@ const HeroInital = () => {
             de la salsa mundial.
           </p>
           <a
-            href='https://api.whatsapp.com/send?phone=573203471469&text=Hola! Estoy interesad@ en realizar una reserva'
+            href={URL_WHATSAPP_API_RESERVATION}
             target='_blank'
             rel='noopener noreferrer'
           >

@@ -125,15 +125,15 @@ const scrollToSection = (sectionId: string, index: number) => {
   const section = document.getElementById(sectionId);
   if (section) {
     if (index === 0) {
-      section.style.scrollMarginTop = '160px'; // Ajustado para considerar NavBar + MobileMenu
+      section.style.scrollMarginTop = '160px';
     } else if (index === 1) {
-      section.style.scrollMarginTop = '150px'; // Ajustado para considerar NavBar + MobileMenu
+      section.style.scrollMarginTop = '150px';
     } else if (index === 3) {
-      section.style.scrollMarginTop = '260px'; // Ajustado para considerar NavBar + MobileMenu
+      section.style.scrollMarginTop = '260px';
     } else if (index === 4) {
-      section.style.scrollMarginTop = '410px'; // Ajustado para considerar NavBar + MobileMenu
+      section.style.scrollMarginTop = '410px';
     } else {
-      section.style.scrollMarginTop = '160px'; // Ajustado para considerar NavBar + MobileMenu
+      section.style.scrollMarginTop = '160px';
     }
     section.scrollIntoView({ behavior: 'smooth' });
   }

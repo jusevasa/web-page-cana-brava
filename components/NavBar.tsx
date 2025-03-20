@@ -1,9 +1,11 @@
 'use client';
 import Hamburger from 'hamburger-react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+
 import { CanaBravaWhiteLogo } from './logos';
+import { URL_WHATSAPP_API_RESERVATION } from '@/constants/general';
 
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -15,7 +17,7 @@ const NavBar = () => {
       <nav className='w-full text-white'>
         <div className='container mx-auto flex items-center justify-between py-5'>
           <div className='w-full h-auto'>
-              <CanaBravaWhiteLogo width={180} height={50}/>
+            <CanaBravaWhiteLogo width={180} height={50} />
           </div>
           <div className='flex items-center justify-end'>
             <div className='md:hidden z-30'>
@@ -44,15 +46,15 @@ const NavBar = () => {
                     <Link href='/menu'>Menu</Link>
                   </li>
 
-                  <li className='bg-[var(--color-orange)] rounded-2xl py-5 px-9 cursor-pointer hover:bg-orange-700 ease-in duration-300 w-auto hover:text-orange-300'>
-                    <a
-                      href='https://api.whatsapp.com/send?phone=573203471469&text=Hola! Estoy interesad@ en realizar una reserva'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
+                  <a
+                    href={URL_WHATSAPP_API_RESERVATION}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <li className='bg-[var(--color-orange)] rounded-2xl py-5 px-9 cursor-pointer hover:bg-orange-700 ease-in duration-300 w-auto hover:text-orange-300'>
                       Reservar
-                    </a>
-                  </li>
+                    </li>
+                  </a>
                 </ul>
               </div>
             </div>
