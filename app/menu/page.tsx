@@ -16,6 +16,7 @@ import CocktailSection from '@/components/CocktailSection';
 import { ScrollToTopBtn } from '@/components/ScrollToTopBtn';
 import PaymentMethodsSection from '@/components/PaymentMethodsSection';
 import OtherSection from '@/components/OtherSection';
+import NavBar from '@/components/NavBar';
 
 export const metadata = {
   title: 'Caña Brava Sala Bar | Menu',
@@ -25,13 +26,9 @@ export const metadata = {
 export default async function Page() {
   return (
     <>
+      <NavBar />
       <MobileMenu categories={CATEGORIES} />
-      <main className='flex flex-col items-center pt-20 relative overflow-hidden '>
-        <div className='w-full mb-5 flex justify-center'>
-          <Link href='/' className='w-3/4'>
-            <CanaBravaWhiteLogo />
-          </Link>
-        </div>
+      <main className='flex flex-col items-center relative overflow-hidden '>
         <WhiskySection />
         <RumSection />
         <TequilaSection />

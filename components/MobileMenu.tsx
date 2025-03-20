@@ -11,6 +11,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ categories }) => {
   const [currentSection, setCurrentSection] = useState<number | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const activeItemRef = useRef<HTMLDivElement | null>(null);
 
   const isDarkSection = currentSection === 8 || currentSection === 9;
 
@@ -45,10 +46,30 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ categories }) => {
     };
   }, [categories]);
 
+  useEffect(() => {
+    if (currentSection !== null && navRef.current) {
+      const activeItem = navRef.current.querySelector(`[data-id="${currentSection}"]`);
+      if (activeItem) {
+        activeItemRef.current = activeItem as HTMLDivElement;
+
+        const containerWidth = navRef.current.offsetWidth;
+        const itemLeft = activeItem.getBoundingClientRect().left;
+        const itemWidth = activeItem.getBoundingClientRect().width;
+        const containerLeft = navRef.current.getBoundingClientRect().left;
+        const scrollLeft = itemLeft - containerLeft - containerWidth / 2 + itemWidth / 2;
+
+        navRef.current.scrollTo({
+          left: navRef.current.scrollLeft + scrollLeft,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }, [currentSection]);
+
   return (
-    <div className='relative' ref={containerRef}>
+    <div className='sticky top-0 z-10' ref={containerRef}>
       <div
-        className={`fixed top-0 w-full z-20 overflow-hidden shadow-md ${
+        className={`w-full overflow-hidden shadow-md ${
           isDarkSection ? 'bg-black' : 'bg-white'
         }`}
       >
@@ -74,15 +95,23 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ categories }) => {
               key={index}
               data-id={category.id}
               className={`px-4 py-2 mx-2 text-md font-semibold cursor-pointer text-center capitalize 
-              whitespace-nowrap transition-all rounded-lg flex-shrink-0
+              whitespace-nowrap transition-all rounded-lg flex-shrink-0 relative
               ${
                 isDarkSection
                   ? 'text-white hover:bg-gray-800'
                   : 'text-black hover:bg-gray-100'
-              }`}
+              }
+              ${currentSection === category.id ? 'opacity-100' : 'opacity-70'}`}
               onClick={() => scrollToSection(`${category.id}`, index)}
             >
               {category.name}
+              {currentSection === category.id && (
+                <div 
+                  className={`absolute bottom-0 left-4 right-4 h-0.5 rounded-full transition-all duration-300 ease-in-out ${
+                    isDarkSection ? 'bg-white' : 'bg-black'
+                  }`}
+                ></div>
+              )}
             </div>
           ))}
           <div className='w-4 shrink-0'></div>
@@ -96,15 +125,15 @@ const scrollToSection = (sectionId: string, index: number) => {
   const section = document.getElementById(sectionId);
   if (section) {
     if (index === 0) {
-      section.style.scrollMarginTop = '100px';
+      section.style.scrollMarginTop = '160px'; // Ajustado para considerar NavBar + MobileMenu
     } else if (index === 1) {
-      section.style.scrollMarginTop = '90px';
+      section.style.scrollMarginTop = '150px'; // Ajustado para considerar NavBar + MobileMenu
     } else if (index === 3) {
-      section.style.scrollMarginTop = '200px';
+      section.style.scrollMarginTop = '260px'; // Ajustado para considerar NavBar + MobileMenu
     } else if (index === 4) {
-      section.style.scrollMarginTop = '350px';
+      section.style.scrollMarginTop = '410px'; // Ajustado para considerar NavBar + MobileMenu
     } else {
-      section.style.scrollMarginTop = '100px';
+      section.style.scrollMarginTop = '160px'; // Ajustado para considerar NavBar + MobileMenu
     }
     section.scrollIntoView({ behavior: 'smooth' });
   }

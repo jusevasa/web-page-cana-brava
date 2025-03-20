@@ -14,7 +14,7 @@ const AguardienteSection = () => {
 
   return (
     <section
-      className={`bg-orange-600 rounded-lg p-8 pb-20 mb-8 mx-5 relative ${
+      className={`bg-orange-600 p-8 pb-20 mb-8 relative ${
         inView
           ? 'animate-fade-right animate-ease-in-out opacity-100'
           : 'opacity-0'

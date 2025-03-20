@@ -1,12 +1,14 @@
 'use client';
 import Hamburger from 'hamburger-react';
 import Link from 'next/link';
-
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { CanaBravaWhiteLogo } from './logos';
 
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   return (
     <header className='max-w-7xl mx-auto px-9 pt-2 md:pt-15 md:px-10'>
@@ -16,11 +18,11 @@ const NavBar = () => {
               <CanaBravaWhiteLogo width={180} height={50}/>
           </div>
           <div className='flex items-center justify-end'>
-            <div className='md:hidden z-20'>
+            <div className='md:hidden z-30'>
               <Hamburger toggled={isOpen} toggle={setOpen} />
             </div>
             <div
-              className={`bg-black/30 backdrop-blur-md fixed inset-0 w-full -translate-x-full bg-red transition duration-300 md:w-auto md:static md:translate-x-0 md:bg-transparent z-10 ${
+              className={`bg-black/30 backdrop-blur-md fixed inset-0 w-full -translate-x-full bg-red transition duration-300 md:w-auto md:static md:translate-x-0 md:bg-transparent z-20 ${
                 isOpen ? 'translate-x-0' : ''
               }`}
             >
@@ -33,13 +35,14 @@ const NavBar = () => {
         [&>li:not(:last-child)]:after:h-[2px] [&>li:not(:last-child):hover]:after:w-full 
         [&>li:not(:last-child):hover]:after:ease-out [&>li:not(:last-child):hover]:after:duration-500"
                 >
-                  {/* <li>Top</li> */}
-
+                  {!isHomePage && (
+                    <li>
+                      <Link href='/'>Inicio</Link>
+                    </li>
+                  )}
                   <li>
                     <Link href='/menu'>Menu</Link>
                   </li>
-                  {/* <li>Galería</li> */}
-                  {/* <li>Ubicación</li> */}
 
                   <li className='bg-[var(--color-orange)] rounded-2xl py-5 px-9 cursor-pointer hover:bg-orange-700 ease-in duration-300 w-auto hover:text-orange-300'>
                     <a
