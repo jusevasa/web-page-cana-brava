@@ -3,6 +3,7 @@ import HeroInital from '@/components/HeroInital';
 import NavBar from '@/components/NavBar';
 import { MenuSection } from '@/components/MenuSection';
 import { Location } from '@/components/Location';
+import GoogleReviews from '@/components/GoogleReviews';
 
 export const metadata = {
   title: 'Caña Brava Sala Bar | Inicio',
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroInital />
         <MenuSection />
         <Location />
+        <GoogleReviews />
       </main>
       <Footer />
     </>
