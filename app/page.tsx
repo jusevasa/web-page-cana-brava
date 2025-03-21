@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main className='max-w-7xl px-9 pt-6 md:pt-15 md:px-10 mx-auto'>
+      <main className='max-w-7xl px-4 pt-6 md:pt-15 md:px-10 mx-auto'>
         <HeroInital />
         <MenuSection />
         <Location />

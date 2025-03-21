@@ -189,7 +189,7 @@ const GoogleReviews: React.FC = () => {
   return (
     <section className='py-16 bg-gray-50'>
       <div className='container mx-auto min-h-[600px]'>
-        <div className='text-center mb-12'>
+        <div className='text-center mb-12 px-4'>
           <h2 className='text-3xl font-bold mb-4'>
             Lo que dicen nuestros clientes
           </h2>

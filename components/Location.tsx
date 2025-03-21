@@ -22,7 +22,7 @@ export const Location = () => {
   if (!isLoaded) return <div>Cargando mapa...</div>;
 
   return (
-    <section className='p-8 bg-white mt-20'>
+    <section className='px-4 py-8 bg-white mt-20'>
       <h2 className='text-4xl font-bold text-orange-600 mb-8 text-center'>
         Ubicación
       </h2>
