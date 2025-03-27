@@ -81,17 +81,17 @@ export const COCKTAILS_PREMIUM = [
   },
   {
     name: 'Amarillo Apasionado',
-    description: 'Amarillo, Hierbabuena, Miradita, Sprite',
+    description: 'Amarillo, Hierbabuena, Maracuya, Sprite',
     value: '35K',
   },
   {
     name: 'Bosque de Indias Caña Brava',
-    description: 'Ingredientes no especificados',
+    description: 'Ginebrava, Zumo de naranja, Blu y Cereza',
     value: '35K',
   },
   {
     name: 'Bosque de Indias Caña Brava Strawberry',
-    description: 'Canela, Roble blanco, Fruta roja, Sprite',
+    description: 'Ginebra, Roble blanco mezcla a frutos rojos, Sprite, Coctel arrebatao',
     value: '35K',
   },
   {
@@ -116,7 +116,7 @@ export const COCKTAILS_PREMIUM = [
   },
   {
     name: 'Baileys Cream',
-    description: 'Crema de whisky, Menta, Canela, Licor de café',
+    description: 'Crema de whisky, Canela, Licor de café',
     value: '35K',
   },
   {
@@ -131,7 +131,7 @@ export const COCKTAILS_PREMIUM = [
   },
   {
     name: 'Mis Raíces',
-    description: 'Vodka, Maracuyá, Hierbabuena, Sprite, Toronja',
+    description: 'Vodka, Maracuyá, Hierbabuena, Sprite, Torombolo',
     value: '35K',
   },
 ];
